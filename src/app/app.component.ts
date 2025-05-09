@@ -9,10 +9,11 @@ import {SectionHeaderComponent} from './component/section-header/section-header.
 import {TopMembersComponent} from './component/top-members/top-members.component';
 import Content from './component/content/content.component';
 import {DashboardSectionComponent} from './component/section/section.component';
+import {MainComponent} from './component/main/main.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SidebarNavigationComponent, SearchBarComponent, UserProfileComponent, HeaderSectionComponent, DashboardComponent, SectionHeaderComponent, TopMembersComponent, Content, DashboardSectionComponent],
+  imports: [RouterOutlet, SidebarNavigationComponent, SearchBarComponent, UserProfileComponent, HeaderSectionComponent, DashboardComponent, SectionHeaderComponent, TopMembersComponent, Content, DashboardSectionComponent, MainComponent],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'
