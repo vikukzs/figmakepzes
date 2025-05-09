@@ -1,0 +1,93 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {CtaCardComponent} from '../cta-card/cta-card.component';
+import {BlogPostCardComponent} from '../blog-post-card/blog-post-card.component';
+import {CategoryBadgeComponent} from '../category-badge/category-badge.component';
+
+@Component({
+  selector: 'app-dashboard-section',
+  standalone: true,
+  imports: [CommonModule, CtaCardComponent, BlogPostCardComponent, CategoryBadgeComponent],
+  template: `
+    <section class="max-w-[824px]">
+      <div
+        class="flex flex-wrap gap-6 items-start w-full max-md:max-w-full"
+      >
+        <app-cta-card
+          imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/591543af762353b91c3a3c56a137e15724df107b?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+          title="Create your first member"
+          description="Add yourself or import from CSV"
+        ></app-cta-card>
+        <app-cta-card
+          imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/ac89ccfa30ce0172683303ec802521ba455f1b68?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+          title="Create a new post"
+          description="Dive into the editor and start creating"
+        ></app-cta-card>
+      </div>
+      <div class="mt-8 w-full max-md:max-w-full">
+        <header class="gap-5 w-full max-md:max-w-full">
+          <div
+            class="flex flex-wrap gap-4 w-full max-md:max-w-full"
+          >
+            <h2
+              class="flex-1 shrink gap-1 text-lg font-semibold leading-loose basis-0 min-w-60 text-neutral-100 max-md:max-w-full"
+            >
+              Recent posts
+            </h2>
+            <div class="self-start w-5">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/33ba99ceade326773e85dfe4177c68bbba517d6b?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+                class="object-contain w-5 aspect-square"
+                alt="Dropdown"
+              />
+            </div>
+          </div>
+          <div
+            class="flex mt-5 w-full bg-gray-800 fill-gray-800 min-h-px max-md:max-w-full"
+          ></div>
+        </header>
+        <div
+          class="flex flex-wrap gap-6 items-start mt-6 w-full max-md:max-w-full"
+        >
+          <app-blog-post-card
+            imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/a36e4f5fcdae3587b50f5f31f5e3ef0b8d794da8?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+            author="Olivia Rhye"
+            date="20 Jan 2024"
+            title="UX review presentations"
+            description="How do you create compelling presentations that wow your colleagues and impress your managers?"
+            [categories]="[
+              { iconUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/871d701f100c0bf5ad4a554a8905c4a1c8c22910?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914', text: 'Design' },
+              { iconUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/878d4c07319674fcc2fceef436113eac24a35925?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914', text: 'Research' },
+              { iconUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8ed62267e4be439479c459a2b3c6b57340782e11?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914', text: 'Presentation' }
+            ]"
+            [hasExternalLink]="true"
+            externalLinkIcon="https://cdn.builder.io/api/v1/image/assets/TEMP/8bb5050e35463136bccb8e32abc69e84f2d5e63c?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+          ></app-blog-post-card>
+          <app-blog-post-card
+            imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/655c8208891a258d78758d1bb100b8ad0bdf5c41?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+            author="Phoenix Baker"
+            date="19 Jan 2022"
+            title="Migrating to Linear 101"
+            description="Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get..."
+            [categories]="[
+              { iconUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/871d701f100c0bf5ad4a554a8905c4a1c8c22910?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914', text: 'Design' },
+              { iconUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/878d4c07319674fcc2fceef436113eac24a35925?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914', text: 'Research' }
+            ]"
+            [hasExternalLink]="true"
+            externalLinkIcon="https://cdn.builder.io/api/v1/image/assets/TEMP/8bb5050e35463136bccb8e32abc69e84f2d5e63c?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+          ></app-blog-post-card>
+        </div>
+      </div>
+    </section>
+  `,
+  styles: [
+    `
+      :host {
+        display: contents;
+      }
+    `
+  ]
+})
+export class DashboardSectionComponent {}
+
+

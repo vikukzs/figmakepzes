@@ -5,10 +5,14 @@ import {SearchBarComponent} from './sidebar/search-bar/search-bar.component';
 import {UserProfileComponent} from './sidebar/user-profile/user-profile.component';
 import {HeaderSectionComponent} from './component/header-section/header-section.component';
 import {DashboardComponent} from './component/container/container.component';
+import {SectionHeaderComponent} from './component/section-header/section-header.component';
+import {TopMembersComponent} from './component/top-members/top-members.component';
+import Content from './component/content/content.component';
+import {DashboardSectionComponent} from './component/section/section.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SidebarNavigationComponent, SearchBarComponent, UserProfileComponent, HeaderSectionComponent, DashboardComponent],
+  imports: [RouterOutlet, SidebarNavigationComponent, SearchBarComponent, UserProfileComponent, HeaderSectionComponent, DashboardComponent, SectionHeaderComponent, TopMembersComponent, Content, DashboardSectionComponent],
   templateUrl: './app.component.html',
   standalone: true,
   styleUrl: './app.component.css'

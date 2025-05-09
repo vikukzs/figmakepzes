@@ -1,0 +1,47 @@
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-section-header',
+  template: `
+    <section class="gap-5 self-stretch">
+      <header class="flex flex-wrap gap-4 w-full max-md:max-w-full">
+        <h2 class="flex-1 shrink gap-1 text-lg font-semibold leading-loose basis-0 min-w-60 text-neutral-100 max-md:max-w-full">
+          {{ title }}
+        </h2>
+        <button
+          class="self-start w-5"
+          aria-label="Toggle dropdown"
+          (click)="toggleDropdown()"
+        >
+          <img
+            [src]="dropdownIconUrl"
+            class="object-contain w-5 aspect-square"
+            alt="Dropdown icon"
+          />
+        </button>
+      </header>
+      <div class="flex mt-5 w-full bg-gray-800 fill-gray-800 min-h-px max-md:max-w-full"></div>
+    </section>
+  `,
+  styles: [
+    `
+      :host {
+        display: contents;
+      }
+    `,
+  ],
+  standalone: true,
+  imports: [CommonModule],
+})
+export class SectionHeaderComponent {
+  @Input() title: string = 'Start creating content';
+  @Input() dropdownIconUrl: string = 'https://cdn.builder.io/api/v1/image/assets/TEMP/bf844d0c732c0bfc1f32e29ac16270e0e1bcd0dd?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914';
+
+  isDropdownOpen: boolean = false;
+
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+    // Additional dropdown functionality can be implemented here
+  }
+}

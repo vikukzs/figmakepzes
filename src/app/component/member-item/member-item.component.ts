@@ -1,0 +1,46 @@
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {Member} from '../../member.model';
+
+@Component({
+  selector: 'app-member-item',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <article class="flex relative gap-3 items-start mt-5 w-full text-sm leading-none first:mt-0">
+      <img
+        [src]="member.profileImage"
+        class="object-contain shrink-0 w-8 aspect-square"
+        alt="{{ member.name }}'s profile picture"
+      />
+      <div class="flex-1 shrink gap-3 basis-0">
+        <div class="w-full">
+          <h3 class="gap-2 self-stretch w-full font-medium text-neutral-300">
+            {{ member.name }}
+          </h3>
+          <p class="text-neutral-400">
+            Member since {{ member.joinDate }}
+          </p>
+        </div>
+      </div>
+      <div
+        *ngIf="member.isOnline"
+        class="flex absolute top-0 right-0 flex-col p-px w-2.5 h-2.5"
+        aria-hidden="true"
+      >
+        <span
+          class="flex shrink-0 w-2 h-2 bg-green-400 rounded-full fill-green-400"
+          title="{{ member.name }} is online"
+        ></span>
+      </div>
+    </article>
+  `,
+  styles: [`
+    :host {
+      display: contents;
+    }
+  `]
+})
+export class MemberItemComponent {
+  @Input() member!: Member;
+}
