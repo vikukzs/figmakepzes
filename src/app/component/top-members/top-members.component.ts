@@ -7,21 +7,7 @@ import {Member} from '../../member.model';
   selector: 'app-top-members',
   standalone: true,
   imports: [CommonModule, MemberItemComponent],
-  template: `
-    <section class="max-w-60">
-      <header>
-        <h2 class="text-sm font-medium leading-none text-neutral-400">
-          Top members
-        </h2>
-      </header>
-      <div class="mt-6 w-full">
-        <app-member-item
-          *ngFor="let member of members"
-          [member]="member"
-        ></app-member-item>
-      </div>
-    </section>
-  `,
+  templateUrl: `top-members.component.html`,
   styles: [`
     :host {
       display: contents;
