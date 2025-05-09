@@ -1,0 +1,28 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {MetricItemComponent} from '../metric-item/metric-item.component';
+
+@Component({
+  selector: 'app-mrr-display',
+  standalone: true,
+  imports: [CommonModule, MetricItemComponent],
+  template: `
+    <section class="whitespace-nowrap w-[196px]">
+      <app-metric-item
+        heading="MRR"
+        value="18,880"
+        change="7.4%"
+        changeIconUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/78a4a781f382cb25dbe08133dc0f7b6d3c127f5d?placeholderIfAbsent=true&apiKey=dfcfffcc633040d682e227c261ee7914"
+        [hasCurrencySymbol]="true"
+        valueClass="text-4xl font-semibold tracking-tighter leading-none text-neutral-100"
+      ></app-metric-item>
+    </section>
+  `,
+  styles: [`
+    :host {
+      display: contents;
+    }
+  `]
+})
+export class MrrDisplayComponent {}
+

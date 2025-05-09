@@ -1,0 +1,25 @@
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "calendar-icon",
+  template: `
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
+    >
+      <path
+        d="M6.66667 5.83333V3.33333M13.3333 5.83333V3.33333M5.83333 9.16667H14.1667M4.16667 16.6667H15.8333C16.7538 16.6667 17.5 15.9205 17.5 15V6.66667C17.5 5.74619 16.7538 5 15.8333 5H4.16667C3.24619 5 2.5 5.74619 2.5 6.66667V15C2.5 15.9205 3.24619 16.6667 4.16667 16.6667Z"
+        stroke="#71717A"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  `,
+  standalone: true
+})
+export class CalendarIconComponent {}

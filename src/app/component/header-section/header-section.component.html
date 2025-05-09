@@ -1,0 +1,33 @@
+<header class="font-semibold">
+  <section class="pt-0 pb-32 w-full pl-[var(--container-padding-desktop,24px)] pr-[var(--container-padding-desktop,24px)] max-md:px-5 max-md:max-w-full">
+    <h1 class="gap-5 w-full text-3xl leading-none whitespace-nowrap text-neutral-100 max-md:max-w-full">
+      <div class="flex flex-wrap gap-20 content-start items-start w-full max-md:max-w-full">
+            <span class="flex-1 shrink gap-1 w-full basis-0 min-w-80 text-neutral-100 max-md:max-w-full">
+              Dashboard
+            </span>
+      </div>
+    </h1>
+
+    <div class="flex flex-wrap gap-10 justify-between items-start mt-6 w-full text-sm leading-none max-md:max-w-full">
+      <time-range-button-group></time-range-button-group>
+
+      <div class="flex gap-3 items-center min-w-60">
+        <div class="gap-2 self-stretch my-auto text-zinc-500">
+          <button class="flex overflow-hidden gap-1 justify-center items-center px-3.5 py-2.5 bg-gray-900 rounded-lg border border-solid shadow-sm border-[color:var(--Component-colors-Components-Buttons-Secondary-button-secondary-border,#333741)]">
+            <calendar-icon></calendar-icon>
+            <span class="self-stretch pt-0 pb-2 my-auto pl-[var(--spacing-xxs,4px)] pr-[var(--spacing-xxs,4px)] text-zinc-500">
+                  Select dates
+                </span>
+          </button>
+        </div>
+
+        <button class="flex overflow-hidden gap-1 justify-center items-center self-stretch px-3.5 py-2.5 my-auto whitespace-nowrap bg-gray-900 rounded-lg border border-solid shadow-sm border-[color:var(--Component-colors-Components-Buttons-Secondary-button-secondary-border,#333741)] text-neutral-300">
+          <filter-icon></filter-icon>
+          <span class="self-stretch pt-0 pb-2 my-auto pl-[var(--spacing-xxs,4px)] pr-[var(--spacing-xxs,4px)] text-neutral-300">
+                Filters
+              </span>
+        </button>
+      </div>
+    </div>
+  </section>
+</header>
