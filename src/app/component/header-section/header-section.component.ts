@@ -7,13 +7,7 @@ import {FilterIconComponent} from '../filter-icon/filter-icon.component';
 @Component({
   selector: "header-section",
   templateUrl: './header-section.component.html',
-  styles: [
-    `
-      :host {
-        display: contents;
-      }
-    `,
-  ],
+  styleUrl: './header-section.component.css',
   standalone: true,
   imports: [
     CommonModule,

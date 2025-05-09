@@ -6,13 +6,7 @@ import {TopMembersComponent} from '../top-members/top-members.component';
   selector: 'content',
   standalone: true,
   imports: [CommonModule, TopMembersComponent],
-  template: `
-    <app-top-members></app-top-members>
-  `,
-  styles: [`
-    :host {
-      display: contents;
-    }
-  `]
+  templateUrl: './content.component.html',
+  styleUrl: './content.component.css'
 })
 export default class Content {}
