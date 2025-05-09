@@ -5,34 +5,6 @@ import { CommonModule } from '@angular/common';
   selector: 'user-profile',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <section class="flex relative gap-4 items-start w-full border-t border-solid border-t-[color:var(--Colors-Border-border-secondary,#1F242F)]">
-      <div class="flex z-0 flex-1 shrink gap-3 items-center basis-4">
-        <div class="flex overflow-hidden relative flex-col justify-center self-stretch my-auto w-10 aspect-square">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0fa50f6c69e092d43aa5e01612c4c48038f4969?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0"
-            class="object-cover absolute inset-0 size-full"
-            alt="User avatar"
-          />
-          <div class="flex relative shrink-0 w-full h-10 rounded-full border-solid border-[0.75px] border-[color:var(--Component-colors-Components-Avatars-avatar-contrast-border,rgba(255,255,255,0.12))]">
-          </div>
-        </div>
-        <div class="self-stretch my-auto text-sm leading-none">
-          <h3 class="font-semibold text-neutral-300">Olivia Rhye</h3>
-          <p class="text-neutral-400">oliviauntitledui.com</p>
-        </div>
-      </div>
-      <button
-        class="flex overflow-hidden absolute right-0 bottom-3 z-0 gap-2 justify-center items-center p-2 w-9 rounded-lg"
-        aria-label="User menu"
-      >
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/57a7dc9e61623d07d5955bb0fe729707484a4947?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0"
-          class="object-contain self-stretch my-auto w-5 aspect-square"
-          alt="Menu"
-        />
-      </button>
-    </section>
-  `
+  templateUrl: './user-profile.component.html',
 })
 export class UserProfileComponent {}
