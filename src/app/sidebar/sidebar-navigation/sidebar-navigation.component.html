@@ -1,7 +1,7 @@
-<aside class="flex overflow-hidden self-stretch h-full bg-gray-900 border-r border-solid border-r-[color:var(--Colors-Border-border-secondary,#1F242F)]">
-  <div class="flex-1 shrink w-full basis-0 min-w-60">
-    <nav class="gap-6 pt-8 w-full">
-      <header class="flex flex-col items-start w-full">
+<aside class="flex overflow-hidden self-stretch h-full border-r border-solid border-r-[color:var(--Colors-Border-border-secondary,#1F242F)]">
+  <div class="flex-1 shrink w-full basis-0 min-w-60 p-2">
+    <nav class="gap-2 pt-3 w-full">
+      <header class="flex flex-col items-start w-full p-3">
         <div class="flex items-start w-[99px]">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/bf8d926306779ef2ebc28ad7b8bd715a2ed7838b?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0"
@@ -11,11 +11,11 @@
         </div>
       </header>
 
-      <div class="pt-0 pb-24 mt-6 w-full text-base whitespace-nowrap pl-[var(--spacing-3xl,] pr-[var(--spacing-3xl,] text-zinc-500">
+      <div class="pt-0 mt-3 w-full text-base whitespace-nowrap pl-[var(--spacing-3xl,] pr-[var(--spacing-3xl,] text-zinc-500">
         <search-bar />
       </div>
 
-      <nav class="gap-1 pt-0 pb-16 mt-6 w-full text-base font-semibold whitespace-nowrap pl-[var(--spacing-xl,] pr-[var(--spacing-xl,] text-neutral-300">
+      <nav class="p-3 pt-0 w-full text-base font-semibold whitespace-nowrap pl-[var(--spacing-xl,] pr-[var(--spacing-xl,] text-neutral-300">
         <nav-item icon="https://cdn.builder.io/api/v1/image/assets/TEMP/ede6082a5504f8598ec9e1297f4abc083a0f2219?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0" text="Home" />
         <nav-item icon="https://cdn.builder.io/api/v1/image/assets/TEMP/55058edc03cf0d899e0706df21040b618973e3f5?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0" text="Dashboard" [isActive]="true" />
         <nav-item icon="https://cdn.builder.io/api/v1/image/assets/TEMP/0ded0069dc07eaeb899731c5462df23cea37adb7?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0" text="Projects" />
@@ -25,13 +25,13 @@
       </nav>
     </nav>
 
-    <footer class="gap-6 mt-6 w-full">
+    <footer class="gap-6 w-full p-3">
       <nav class="gap-1 w-full text-base font-semibold whitespace-nowrap text-neutral-300">
         <nav-item icon="https://cdn.builder.io/api/v1/image/assets/TEMP/3074536b0312b798393b7941e86db32d147f0655?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0" text="Support" />
         <nav-item icon="https://cdn.builder.io/api/v1/image/assets/TEMP/78f01694be07bf6fb5c4f4b72624c2a90e49bbf3?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0" text="Settings" />
       </nav>
 
-      <feature-card />
+      <feature-card class="p-3" />
       <user-profile />
     </footer>
   </div>
