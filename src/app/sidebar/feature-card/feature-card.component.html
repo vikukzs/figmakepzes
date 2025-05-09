@@ -1,1 +1,36 @@
-<p>feature-card works!</p>
+<article class="flex flex-col gap-16 pt-20 pb-16 w-full rounded-lg bg-[#161B26]">
+  <div class="gap-1 w-full">
+    <header class="flex relative gap-1 items-start pr-6 w-full">
+      <h3 class="z-0 flex-1 shrink text-sm font-semibold leading-none basis-4 text-neutral-100">
+        New features available!
+      </h3>
+      <button
+        class="flex overflow-hidden absolute -right-2 -top-3 z-0 justify-center items-center p-2 w-9 h-9 rounded-lg min-h-9"
+        (click)="onDismiss.emit()"
+        aria-label="Close"
+      >
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6a1d11c1f8f3b9e12b4b7645dd57e059289d74a0?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0"
+          class="object-contain self-stretch my-auto w-5 aspect-square"
+          alt="Close"
+        />
+      </button>
+    </header>
+    <p class="mt-1 text-sm leading-5 text-neutral-400">
+      Check out the new dashboard view. Pages now load faster.
+    </p>
+  </div>
+  <img
+    src="https://cdn.builder.io/api/v1/image/assets/TEMP/68f39fb29a2baed2bb26250cb98df81a56afcff3?placeholderIfAbsent=true&apiKey=bef382be73d24de0969b578f4e2fc9e0"
+    class="object-contain mt-4 aspect-[1.59] w-[216px]"
+    alt="Feature preview"
+  />
+  <div class="flex gap-3 items-start self-start mt-4 text-sm font-semibold leading-none">
+    <button class="overflow-hidden gap-1.5 self-stretch whitespace-nowrap text-neutral-400">
+      Dismiss
+    </button>
+    <button class="overflow-hidden gap-1.5 self-stretch text-neutral-300">
+      What's new?
+    </button>
+  </div>
+</article>
